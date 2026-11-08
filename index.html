@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroHub - Online Electronics Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2 class="logo">Electro<span>Hub</span></h2>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('shop')">Shop</a></li>
+            <li><a href="#" onclick="showPage('about')">About</a></li>
+            <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+            <li><a href="#" onclick="showPage('cart')">Cart 🛒 <span id="cart-count">0</span></a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HOME PAGE -->
+<section id="home" class="page active">
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Discover The Latest <span>Technology</span></h1>
+            <p>Shop premium electronics, gadgets and accessories at amazing prices.</p>
+            <button onclick="showPage('shop')">Shop Now →</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800" alt="Electronics">
+        </div>
+    </div>
+
+    <h2 class="heading">Our Popular Products</h2>
+    <div class="products" id="home-products"></div>
+
+    <div class="offer">
+        <h2>Big Deals. Better Technology!</h2>
+        <p>Find your favourite gadgets in one place.</p>
+        <button onclick="showPage('shop')">Explore Store</button>
+    </div>
+</section>
+
+<!-- SHOP PAGE -->
+<section id="shop" class="page">
+    <h1 class="heading">Our Products</h1>
+    <input type="text" id="search" placeholder="Search electronics..." oninput="searchProducts()">
+    <div class="products" id="shop-products"></div>
+</section>
+
+<!-- ABOUT PAGE -->
+<section id="about" class="page">
+    <div class="page-banner">
+        <h1>About ElectroHub</h1>
+        <p>Your trusted destination for modern electronics.</p>
+    </div>
+
+    <div class="about-content">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" alt="Technology team">
+        <div>
+            <h2>Welcome to ElectroHub</h2>
+            <p>ElectroHub is an online electronics store where you can explore modern gadgets, smart devices and technology accessories.</p>
+            <p>Our goal is to make technology shopping simple, convenient and enjoyable.</p>
+            <button onclick="showPage('shop')">Explore Products</button>
+        </div>
+    </div>
+
+    <div class="features">
+        <div>⭐<h3>Quality Products</h3><p>Modern electronics and gadgets.</p></div>
+        <div>🚚<h3>Fast Delivery</h3><p>Convenient shopping experience.</p></div>
+        <div>💬<h3>Customer Support</h3><p>We are here to help you.</p></div>
+    </div>
+</section>
+
+<!-- CONTACT PAGE -->
+<section id="contact" class="page">
+    <div class="page-banner">
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you!</p>
+    </div>
+
+    <div class="contact-box">
+        <div>
+            <h2>Get In Touch</h2>
+            <p>📧 info@electrohub.com</p>
+            <p>📞 +92 300 1234567</p>
+            <p>📍 Karachi, Pakistan</p>
+        </div>
+
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- CART PAGE -->
+<section id="cart" class="page">
+    <h1 class="heading">Shopping Cart 🛒</h1>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+        <h2>Total: Rs. <span id="total">0</span></h2>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+</section>
+
+<footer>
+    <h2>ElectroHub</h2>
+    <p>Your destination for smart electronics.</p>
+    <p>© 2026 ElectroHub. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
